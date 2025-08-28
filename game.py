@@ -127,11 +127,11 @@ while running:
     pygame.draw.ellipse(screen, WHITE, ball)
     pygame.draw.aaline(screen, WHITE, (WIDTH//2, 0), (WIDTH//2, HEIGHT))
     
-    # Mostrar marcador y velocidad
+    # Mostrar marcador
     score_text = font.render(f"{player_score} - {ai_score}", True, WHITE)
-    speed_text = font.render(f"Velocidad: {current_ball_speed:.1f}", True, WHITE)
     screen.blit(score_text, (WIDTH//2 - score_text.get_width()//2, 20))
-    screen.blit(speed_text, (WIDTH//2 - speed_text.get_width()//2, 60))
+    # speed_text = font.render(f"Velocidad: {current_ball_speed:.1f}", True, WHITE)
+    # screen.blit(speed_text, (WIDTH//2 - speed_text.get_width()//2, 60))
     
     pygame.display.flip()
     clock.tick(60)
